@@ -24,6 +24,7 @@ export const useFetch = (url) => {
 
   useEffect(() => {
     let cancelFetch = false;
+
     if (!url) return;
 
     const fetchData = async () => {
@@ -40,7 +41,7 @@ export const useFetch = (url) => {
           dispatch({ type: 'FETCH_COMPLETE', payload: data });
         } catch (error) {
           if (cancelFetch) return;
-          dispatch({ type: 'FETCH_ERROR', payload: error });
+          dispatch({ type: 'FETCH_ERROR', payload: error.message });
         }
       }
     };
