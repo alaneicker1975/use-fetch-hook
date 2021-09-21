@@ -1,3 +1,5 @@
+@import '../node_modules/@atomikui/core/dist/styles/main.min.css';
+
 body {
   background-color: #282c34;
   color: white;
@@ -8,6 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
+  line-height: 1.4;
   padding: 16px;
 }
 
